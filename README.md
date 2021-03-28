@@ -2,7 +2,7 @@ Search Plugins
 ===
 
 
-[![TravisCI Status](https://travis-ci.com/github/hiteshnayak305/search-plugins.svg?branch=master)](https://travis-ci.com/github/hiteshnayak305/search-plugins)
+[![TravisCI Status](https://api.travis-ci.com/hiteshnayak305/search-plugins.svg?branch=master)](https://travis-ci.com/github/hiteshnayak305/search-plugins)
 
 All search plugins at one place for
 
