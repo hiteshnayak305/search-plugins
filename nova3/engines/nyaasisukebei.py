@@ -29,7 +29,7 @@ except:
     pass
 
 
-class nyaasi(object):
+class nyaasisukebei(object):
     """Class used by qBittorrent to search for torrents"""
 
     url = 'https://sukebei.nyaa.si'
@@ -48,7 +48,7 @@ class nyaasi(object):
             'tv': '4_0',
             'movies': '4_0'}
 
-    class NyaasiParser(HTMLParser):
+    class NyaasiSukebeiParser(HTMLParser):
         """ Parses Nyaa.si browse page for search resand prints them"""
         def __init__(self, res, url):
             try:
@@ -139,7 +139,7 @@ class nyaasi(object):
 
         hits = []
         page = 1
-        parser = self.NyaasiParser(hits, self.url)
+        parser = self.NyaasiSukebeiParser(hits, self.url)
         while True:
             res = retrieve_url(url + "&p={}".format(page))
             parser.feed(res)
