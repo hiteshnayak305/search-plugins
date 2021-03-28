@@ -15,7 +15,7 @@ except ImportError:
     from HTMLParser import HTMLParser
          
 class kickass_torrent(object):
-    url = 'https://kickass2.biz'
+    url = 'https://kickass.onl'
     name = 'KickAss torrent'
     supported_categories = {'all': 'all'}
     
@@ -23,7 +23,7 @@ class kickass_torrent(object):
 
         def __init__(self):
             HTMLParser.__init__(self)
-            self.url = 'https://kickass2.biz'
+            self.url = 'https://kickass.onl'
             self.TABLE_INDEX = 1
             self.insideDataTd = False
             self.tdCount = -1

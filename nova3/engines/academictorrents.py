@@ -38,7 +38,7 @@ class MyHTMLParser(HTMLParser):
         "size": -1,
         "seeds": 0,
         "leech": 0,
-        "engine_url": "http://academictorrents.com",
+        "engine_url": "https://academictorrents.com",
         "desc_link": -1
     }
 
@@ -117,7 +117,7 @@ class MyHTMLParser(HTMLParser):
     def handle_data(self, data):
         match_next = ['root', 'html', 'body', 'center', 'p', 'ul', 'li', 'a']
         match_torrent = ['root', 'html', 'body', 'table', 'tr']
-        url = "http://academictorrents.com"
+        url = "https://academictorrents.com"
 
         if self.tag_stack[:len(match_next)] == match_next and "Next" in data:
             self.data["next_page"] = url + "/" + self.attrs_stack[7]["href"]
@@ -147,7 +147,7 @@ class MyHTMLParser(HTMLParser):
 
 class academictorrents(object):
     """ Search engine class """
-    url = "http://academictorrents.com"
+    url = "https://academictorrents.com"
     name = "Academic Torrents"
     supported_categories = {'all': ''}
 
@@ -160,7 +160,7 @@ class academictorrents(object):
         if cat != 'all':
             return
 
-        search_url = "http://academictorrents.com/browse.php?search={what}"
+        search_url = "https://academictorrents.com/browse.php?search={what}"
 
         url = search_url.format(what=what)
 

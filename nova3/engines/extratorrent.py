@@ -15,7 +15,7 @@ except ImportError:
 
 
 class extratorrent(object):
-    url = 'https://extratorrent.si'
+    url = 'https://extratorrents.ch'
     name = 'ExtraTorrent'
     supported_categories = {'all': '0', 'movies': '4', 'tv': '8', 'music': '5', 'games': '3', 'anime': '1',
                             'software': '7'}
@@ -24,7 +24,7 @@ class extratorrent(object):
 
         def __init__(self):
             HTMLParser.__init__(self)
-            self.url = 'https://extratorrent.si'
+            self.url = 'https://extratorrents.ch'
             self.TABLE_INDEX = 13
             self.insideDataTd = False
             self.tdCount = -1
@@ -50,9 +50,9 @@ class extratorrent(object):
                 if self.tdCount == self.infoMap['torrLink']:
                     if Dict.get('href', '').startswith('magnet'):
                         self.singleResData['link'] = Dict['href']
-                    if Dict.get('href', '').find('extratorrent') != -1:
+                    if Dict.get('href', '').find('extratorrents') != -1:
                         if Dict['href'].startswith('//'):
-                            Dict['href'] = Dict['href'].replace('//extratorrent.si', self.url)
+                            Dict['href'] = Dict['href'].replace('//extratorrents.ch', self.url)
                         self.singleResData['desc_link'] = Dict['href']
 
         def handle_endtag(self, tag):

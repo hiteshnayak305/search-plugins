@@ -18,7 +18,7 @@ from novaprinter import prettyPrinter
 
 
 class anidex(object):
-    url = 'https://anidex.info/'
+    url = 'https://anidex.info'
     name = 'AniDex'
     supported_categories = {
         'all': '',
